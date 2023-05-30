@@ -2,7 +2,6 @@ import "@/styles/globals.css"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
-import { getClient } from "@/lib/client"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
@@ -31,8 +30,6 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const client = getClient()
-
   return (
     <>
       <html lang="en" suppressHydrationWarning>
@@ -43,6 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
+          {/* <ApolloProvider client={client}> */}
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex flex-col min-h-screen">
               <SiteHeader />
@@ -50,6 +48,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </div>
             <TailwindIndicator />
           </ThemeProvider>
+          {/* </ApolloProvider> */}
         </body>
       </html>
     </>

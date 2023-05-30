@@ -16,14 +16,14 @@ const api = new WooCommerceRestApi({
 })
 
 export async function GET(request: Request) {
-  const { data: products } = await api.get("products")
-  products.map((product: Product) => {
-    console.log(product.name)
-    console.log(product.permalink)
-    console.log(product.price)
-    console.log(product.description)
-  })
-  return NextResponse.json(products, {
-    status: 200,
-  })
+  // const { data: products } = await api.get("products")
+  // products.map((product: Product) => {
+  //   console.log(product.name)
+  //   console.log(product.permalink)
+  //   console.log(product.price)
+  //   console.log(product.description)
+  // })
+  // return NextResponse.json(products, {
+  //   status: 200,
+  // })
 }
