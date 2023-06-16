@@ -16,6 +16,7 @@
   "dependencies": {
     "@apollo/client": "^3.8.0-alpha.15",
     "@apollo/experimental-nextjs-app-support": "^0.1.0",
+    "@radix-ui/react-avatar": "^1.0.3",
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "axios": "^1.4.0",
     "class-variance-authority": "^0.4.0",

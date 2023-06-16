@@ -4,6 +4,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  images: {
+    domains: ["next-wp-ecommerce.local"],
+  },
 }
 
 export default nextConfig

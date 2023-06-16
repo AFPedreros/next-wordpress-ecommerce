@@ -2,7 +2,7 @@ import Link from "next/link"
 import { gql } from "@apollo/client"
 
 import { getClient } from "@/lib/apollo"
-import Products from "@/components/products"
+import ProductCard from "@/components/product-card"
 
 const query = gql`
   query NewQuery {
@@ -46,9 +46,9 @@ const query = gql`
 `
 
 export default async function IndexPage() {
-  const { data } = await getClient().query({ query })
+  // const { data } = await getClient().query({ query })
 
-  console.log(data.products.nodes)
+  // console.log(data.products.nodes)
 
   return (
     <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10">
